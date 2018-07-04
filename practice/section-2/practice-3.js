@@ -8,10 +8,11 @@ function countSameElements(collection) {
     if(key.indexOf('-')>=0 || key.indexOf(':')>=0 || key.indexOf('[')>=0){
       var realKey = key.split(/[-:[]/)[0];
       var realValue;
-      if(key.indexOf(']')>=0)
-       realValue = parseInt(key.split('[')[1].split(']')[0]);
-      else
-       realValue = parseInt(key.split(/[-:[]/)[1]);
+      realValue = parseInt(key.replace(/[^0-9]/ig, ""));
+      // if(key.indexOf(']')>=0)
+      //  realValue = parseInt(key.split('[')[1].split(']')[0]);
+      // else
+      //  realValue = parseInt(key.split(/[-:[]/)[1]);
 
       if(containKey(map,realKey)){
         map[realKey] =  map[realKey]+realValue;
