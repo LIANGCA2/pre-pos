@@ -6,7 +6,7 @@ function countSameElements(collection) {
   for(var i = 0;i<collection.length;i++){
     var key = collection[i];
     if(key.indexOf('-')>=0 || key.indexOf(':')>=0 || key.indexOf('[')>=0){
-      var realKey = key.split(/[-:[]/)[0];
+      var realKey = key.split(/[-:[]/)[0];rer
       var realValue;
       realValue = parseInt(key.replace(/[^0-9]/ig, ""));
       // if(key.indexOf(']')>=0)
