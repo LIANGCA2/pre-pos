@@ -20,8 +20,8 @@ function createUpdatedCollection(collectionA, objectB) {
 function countSameElements(collection) {
   var target =new Array();
   var map = {};
-  for(var i = 0;i<collection.length;i++){
-    var key = collection[i];
+  for(let key of collection){
+    // var key = collection[i];
     if(key.indexOf('-')>=0){
       var realKey = key.split('-')[0];
       var realValue = parseInt(key.split('-')[1]);
